@@ -1,0 +1,43 @@
+:root {
+
+    /* Primary Colors */
+    --primary: #16A34A;
+    --primary-hover: #15803D;
+    --secondary: #14532D;
+    --accent: #22C55E;
+
+    /* Background Colors */
+    --background: #F0FDF4;
+    --light: #F8FFF9;
+    --white: #FFFFFF;
+
+    /* Text Colors */
+    --dark: #14532D;
+    --dark-card: #1F2937;
+    --gray: #6B7280;
+
+    /* Borders */
+    --border: #BBF7D0;
+
+    /* Status */
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #DC2626;
+
+    /* Fonts */
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Inter", sans-serif;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 10px rgba(20, 83, 45, 0.08);
+    --shadow-md: 0 10px 25px rgba(20, 83, 45, 0.12);
+    --shadow-lg: 0 20px 50px rgba(20, 83, 45, 0.18);
+
+    /* Border Radius */
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+    /* Container */
+    --container-width: 1200px;
+}

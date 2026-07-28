@@ -1,0 +1,590 @@
+/*==========================
+GLOBAL
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#F0FDF4;
+    color:#1F2937;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:90px 0;
+}
+
+/*==========================
+HEADER
+==========================*/
+
+.main-header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    z-index:999;
+}
+
+.main-header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:85px;
+}
+
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links li{
+    position:relative;
+}
+
+.nav-links a{
+    color:#1F2937;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#16A34A;
+}
+
+.menu-toggle{
+        display:none;
+    }
+
+/* Dropdown */
+
+.dropdown-menu{
+    position:absolute;
+    top:45px;
+    left:0;
+    width:290px;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    list-style:none;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:.3s;
+
+    padding:10px 0;
+}
+
+.dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.dropdown-menu li a{
+    display:block;
+    padding:14px 25px;
+}
+
+.dropdown-menu li a:hover{
+    background:#F3F4F6;
+    color:#16A34A;
+}
+
+/*=========================
+SERVICE HERO
+=========================*/
+
+.service-hero{
+    position: relative;
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 0 80px;
+
+    background:
+        linear-gradient(
+            rgba(20,83,45,.75),
+            rgba(15,23,42,.75)
+        ),
+        url("../icons/scrap.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #fff;
+}
+
+.hero-grid{
+    display:grid;
+    gap:70px;
+    align-items:center;
+}
+
+.hero-tag{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:50px;
+    background:rgba(22,163,74,.1);
+    color:#16A34A;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero-content h1{
+    font-size:52px;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.hero-content p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+   color:#E5E7EB;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.btn-primary{
+
+    background:#16A34A;
+
+    color:#fff;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+}
+
+.btn-secondary{
+
+    background:#25D366;
+
+    color:#fff;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+}
+
+
+/*=========================
+ABOUT
+=========================*/
+
+.service-about{
+
+    padding:90px 0;
+
+    background:#fff;
+
+    text-align:center;
+
+}
+
+.service-about h2{
+
+    font-size:40px;
+
+    color:#14532D;
+
+    margin-bottom:25px;
+
+}
+
+.service-about p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    color:#64748B;
+
+}
+
+/*=========================
+PURCHASE SECTION
+=========================*/
+
+.purchase-section{
+
+    padding:100px 0;
+
+    background:#F8FAFC;
+
+}
+
+.purchase-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.purchase-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.purchase-content h2{
+    font-size:40px;
+    color:#14532D;
+    margin-bottom:5px;
+}
+
+.purchase-content ul{
+    list-style:none;
+}
+
+.purchase-content li{
+    position:relative;
+    padding:10px 0 10px 0;
+    border-bottom:1px solid #E5E7EB;
+}
+
+.purchase-content li::before{
+    content:"✔";
+    position:relative;
+    left:0;
+    color:#16A34A;
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+/* Large Tablets */
+
+@media (max-width: 1024px) {
+
+    .container{
+        width:95%;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .purchase-content h2,
+    .service-about h2{
+        font-size:36px;
+    }
+
+}
+
+/* Tablets */
+
+@media (max-width: 992px) {
+
+    .section{
+        padding:80px 0;
+    }
+
+    .header-buttons{
+        display:none;
+    }
+
+    .menu-toggle{
+        display:block;
+        z-index:1001;
+    }
+
+    .main-header .container{
+        height:70px;
+        padding:0 15px;
+    }
+
+    .navbar{
+        position:fixed;
+        top:70px;
+        left:-100%;
+
+        width:280px;
+        height:calc(100vh - 70px);
+
+        background:#fff;
+
+        overflow-y:auto;
+
+        transition:.3s;
+
+        box-shadow:0 10px 30px rgba(0,0,0,.1);
+        padding-top: 20px;
+    }
+
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:50px;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .purchase-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .purchase-content{
+        text-align:center;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px) {
+
+    .container{
+        width:92%;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .main-header .container{
+        height:70px;
+    }
+
+    .service-hero{
+        min-height:500px;
+        padding:120px 0 60px;
+    }
+
+    .hero-tag{
+        font-size:14px;
+        padding:8px 18px;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+        line-height:1.3;
+    }
+
+    .hero-content p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:220px;
+        text-align:center;
+    }
+
+    .main-header .container{
+        height:70px;
+    }
+
+    .logo{
+        gap:10px;
+    }
+
+    .logo-icon{
+        width:50px;
+        height:50px;
+    }
+
+    .logo-text h3{
+        font-size:16px;
+    }
+
+    .logo-text span{
+        font-size:9px;
+    }
+
+    .container{
+        width:95%;
+    }
+
+    .service-about h2{
+        font-size:30px;
+    }
+
+    .service-about p{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .purchase-content h2{
+        font-size:30px;
+        margin-bottom:20px;
+    }
+
+    .purchase-content li{
+        font-size:16px;
+        padding:12px 0;
+    }
+
+    .purchase-image img{
+        border-radius:15px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:576px) {
+
+    .container{
+        width:94%;
+    }
+
+    .service-hero{
+        min-height:450px;
+        padding:100px 0 50px;
+    }
+
+    .hero-content h1{
+        font-size:28px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+    }
+
+    .hero-tag{
+        font-size:13px;
+        padding:7px 16px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+        max-width:250px;
+        padding:14px 25px;
+        font-size:15px;
+    }
+
+    .logo-icon{
+        width:42px;
+        height:42px;
+    }
+
+    .logo-text h3{
+        font-size:14px;
+    }
+
+    .logo-text span{
+        font-size:8px;
+    }
+
+    .menu-toggle{
+        font-size:24px;
+    }
+
+    .service-about h2,
+    .purchase-content h2{
+        font-size:26px;
+    }
+
+    .service-about p,
+    .purchase-content li{
+        font-size:14px;
+    }
+
+}
+
+/* Extra Small Devices */
+
+@media (max-width:400px) {
+
+    .hero-content h1{
+        font-size:24px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .service-about h2,
+    .purchase-content h2{
+        font-size:22px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        font-size:14px;
+        padding:12px 20px;
+    }
+
+}
